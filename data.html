@@ -34,14 +34,14 @@
         if(hasLocalStorage()){
           if(localStorage.database){
             alert("next");
-            localStorage.database = localStorage.database;
+            localStorage.database = null;
           } 
           else{
             alert("first");
             localStorage.database = games;
-            alert(localStorage.database);
+            alert("1: "+ localStorage.database);
           }
-            alert(localStorage.database);
+            alert("Always: "+ localStorage.database);
         }
         else{
           alert("No HTML5 Local Storage");
