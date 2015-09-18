@@ -24,6 +24,10 @@
         var display = document.getElementById("number-spot");
         display.innerHTML = roll;
       }
+      function changeScore(num){
+        var display = document.getElementById("number-spot");
+        display.innerHTML = display.value + num;
+      }
     </script>
   </head>
   <body>
@@ -42,9 +46,10 @@
       </div> <!-- navbar -->
       
       
-      <div data-role="content">
+      <div data-role="content" align="center">
         <p>Hello extras, Here you will find various appletts</p>
         <a href="#dice" data-role="button" data-inline="true" data-transition="fade">Dice</a>
+        <a href="#points" data-role="button" data-inline="true" data-transition="fade">Point Tracker</a>
       </div><!-- /content -->
     </div><!-- /page -->
     
@@ -62,7 +67,7 @@
       </div> <!-- navbar -->
       
       
-      <div data-role="content">
+      <div data-role="content" align="center">
         <p>This is the dice!</p>
         <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="fade">Roll D6</a>
         <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="fade">Roll D20</a>
@@ -74,5 +79,34 @@
    
       </div><!-- /content -->
     </div><!-- /page -->
+    
+    <div data-role="page" id="points">
+      <div data-role="header">
+        <h1>Points Tracker</h1>
+      </div><!-- /header -->
+      
+      <div data-role="navbar" class="header">
+        <ul>
+          <li><a href="data.html" data-transition="fade">Data</a></li>
+          <li><a href="index.html" data-transition="fade">Home</a></li>
+          <li><a href="extras.html" data-transition="fade">Extras</a></li>
+        </ul>
+      </div> <!-- navbar -->
+      
+      
+      <div data-role="content" align="center">
+        <p>This is the dice!</p>
+        <a onclick="changeScore(5);" data-role="button" data-inline="true" data-transition="fade">+5</a>
+        <a onclick="changeScore(1);" data-role="button" data-inline="true" data-transition="fade">+1</a>
+        <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="fade">-5</a>
+        <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="fade">-1</a>
+        <p id="number-spot">0</p>
+        <br>
+        <a href="#extraspage" data-role="button" data-inline="true" data-transition="fade">Go Back</a>
+        <br>
+   
+      </div><!-- /content -->
+    </div><!-- /page -->
+    
   </body>
 </html>
