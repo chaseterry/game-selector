@@ -19,8 +19,8 @@
       
       var games = [];
       
-      function game(namez, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
-        this.namez = namez;
+      function game(name, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
+        this.name = name;
         this.isBoard = isBoard;
         this.isCard = isCard;
         this.minPlayers = minPlayers;
@@ -36,8 +36,8 @@
       
       function dataInput(){
         alert("Data input");
-        var namez = document.getElementById("game-name").value;
-        alert("name: "+ namez);
+        var name = document.getElementById("game-name").value;
+        alert("name: "+ name);
         var isBoard = !!(document.getElementById("board-or-card").value);
         alert("board: "+isBoard);
         var isCard = !(document.getElementById("board-or-card").value);
@@ -45,10 +45,10 @@
         var min = document.getElementById("min-players").value;
         var max = document.getElementById("max-players").value;
         var appArray = [document.getElementById("dice").value, document.getElementById("starting-player").value;];
-        var game1 = new game(namez, isBoard, isCard, catArray, min, max, appArray);
+        var game1 = new game(name, isBoard, isCard, catArray, min, max, appArray);
         addToDatabase(game1);
         alert("data input over");
-        alert(games[0].namez);
+        alert(games[0].name);
         alert(games[0].isBoard);
         alert(games[0].isCard);
         alert(games[0].catArray);
