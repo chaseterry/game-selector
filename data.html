@@ -38,14 +38,10 @@
         var name = document.getElementById("game-name").value;
         var isBoard = !!(document.getElementById("board-or-card").value);
         var isCard = !(document.getElementById("board-or-card").value);
-        //var catArray = [document.getElementById("strategy").value, document.getElementById("action").value];
         var catArray = [$('#strategy').is(':checked'), $('#action').is(':checked')];
-
         var min = document.getElementById("min-players").value;
         var max = document.getElementById("max-players").value;
-        var appArray = [document.getElementById("dice").value, document.getElementById("starting-player").value];
-        
-        //var appArray = [settings.DEnabled = $("#strategy").prop("checked"), settings.DEnabled = $("#action").prop("checked")];
+        var catArray = [$('#dice').is(':checked'), $('#starting-player').is(':checked')];
         var game1 = new game(name, isBoard, isCard, catArray, min, max, appArray);
         addToDatabase(game1);
         alert("data input over2");
