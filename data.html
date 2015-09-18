@@ -44,7 +44,7 @@
         var appArray = [document.getElementById("dice").value, document.getElementById("starting-player").value];
         var game1 = new game(name, isBoard, isCard, catArray, min, max, appArray);
         addToDatabase(game1);
-        alert("data input over");
+        alert("data input over2");
         alert(games[0].name);
         alert(games[0].isBoard);
         alert(games[0].isCard);
@@ -137,9 +137,9 @@
           <fieldset data-role="controlgroup">
             <legend>Select All Categories:</legend>
             <label for="strategy">Strategy</label>
-            <input type="checkbox" name="strategy" id="strategy" value="true">
+            <input type="checkbox" name="strategy" id="strategy">
             <label for="action">Action</label>
-            <input type="checkbox" name="action" id="action" value="true">
+            <input type="checkbox" name="action" id="action">
           </fieldset>
           <label for="min-players">Minimum number of players:</label>
           <input type="range" name="min-players" id="min-players" min="1" max="10" value="2">
@@ -148,9 +148,9 @@
           <fieldset data-role="controlgroup">
             <legend>Associated Applets:</legend>
             <label for="dice">Dice</label>
-            <input type="checkbox" name="dice" id="dice" value="true">
+            <input type="checkbox" name="dice" id="dice">
             <label for="starting-player">Starting player selector</label>
-            <input type="checkbox" name="starting-player" id="starting-player" value="true">
+            <input type="checkbox" name="starting-player" id="starting-player">
           </fieldset>
           <input type="submit" value="Submit" data-icon="check" data-iconpos="right" data-inline="true">
         </form>
