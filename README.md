@@ -7,11 +7,9 @@ Create an app that helps randomly pick games and assists in playing them.
 Create a list of games, edit the list of games. Randomly select between the list of games, based on parameters. Associate games in the list with appletts that help with playing games. (Point tracker, dice, role selector)
 
 #####ToDo list:
-Make barebones tabbed system
-randomize from static list
-editable list
-appletts in extras page
-associate appletts with games
-local storage
-
-
+- Make barebones tabbed system
+- Randomize from static list
+- Editable list
+- Appletts in extras page
+- Associate appletts with games
+- Local storage
