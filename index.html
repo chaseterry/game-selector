@@ -43,6 +43,17 @@
         }
         alert("pass through");
       }
+      
+      function hasLocalStorage(){
+        if(typeof(Storage) !== "undefined"){
+          //has local storage
+          return true;
+        }
+        else{
+          //does not have local storage
+          return false;
+        }
+      }
     </script>
   </head>
   <body>
