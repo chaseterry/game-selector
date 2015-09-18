@@ -30,6 +30,10 @@
         counter = counter + num;
         display.innerHTML = counter;
       }
+      function suggestion(){
+        var display = document.getElementById("suggestion-spot");
+        display.innerHTML = "NOSE GOES!! Touch a random person's nose, whoever's nose get's touched last goes first."
+      }
     </script>
   </head>
   <body>
@@ -52,6 +56,7 @@
         <p>Hello extras, Here you will find various appletts</p>
         <a href="#dice" data-role="button" data-inline="true" data-transition="fade">Dice</a>
         <a href="#points" data-role="button" data-inline="true" data-transition="fade">Point Tracker</a>
+        <a href="#picker" data-role="button" data-inline="true" data-transition="fade">First Person?</a>
       </div><!-- /content -->
     </div><!-- /page -->
     
@@ -97,11 +102,11 @@
       
       
       <div data-role="content" align="center">
-        <p>This is the dice!</p>
+        <p>Points</p>
         <a onclick="changeScore(5);" data-role="button" data-inline="true" data-transition="fade">+5</a>
         <a onclick="changeScore(1);" data-role="button" data-inline="true" data-transition="fade">+1</a>
         <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="fade">-5</a>
-        <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="fade">-1</a>
+        <a onclick="changeScore(-1);" data-role="button" data-inline="true" data-transition="fade">-1</a>
         <p id="point-spot">0</p>
         <br>
         <a href="#extraspage" data-role="button" data-inline="true" data-transition="fade">Go Back</a>
@@ -110,5 +115,30 @@
       </div><!-- /content -->
     </div><!-- /page -->
     
+    <div data-role="page" id="First Person">
+      <div data-role="header">
+        <h1>First Person Decider</h1>
+      </div><!-- /header -->
+      
+      <div data-role="navbar" class="header">
+        <ul>
+          <li><a href="data.html" data-transition="fade">Data</a></li>
+          <li><a href="index.html" data-transition="fade">Home</a></li>
+          <li><a href="extras.html" data-transition="fade">Extras</a></li>
+        </ul>
+      </div> <!-- navbar -->
+      
+      
+      <div data-role="content" align="center">
+        <p>Who goes first??</p>
+        <a href="#randchoice" data-role="button" data-inline="true" data-transition="fade">Random Choice</a>
+        <a onclick="suggestion();" data-role="button" data-inline="true" data-transition="fade">Fun Method!(3+)</a>
+        <p id="suggestion-spot"> </p>
+        <br>
+        <a href="#extraspage" data-role="button" data-inline="true" data-transition="fade">Go Back</a>
+        <br>
+   
+      </div><!-- /content -->
+    </div><!-- /page -->
   </body>
 </html>
