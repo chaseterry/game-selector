@@ -19,6 +19,11 @@
       function random(min,max){
         return Math.floor(Math.random() * (max - min + 1)) + min;
       }
+      function rolld6(){
+        var roll = random(1,6);
+        var display = document.getElementById("number-spot");
+        display = roll;
+      }
     </script>
   </head>
   <body>
@@ -59,7 +64,12 @@
       
       <div data-role="content">
         <p>This is the dice!</p>
+        <a onclick="rolld6();" data-role="button" data-inline="true">Roll D6</a>
+        <p id="number-spot">0</p>
+        <br>
         <a href="#extraspage" data-role="button" data-inline="true">Go Back</a>
+        <br>
+   
       </div><!-- /content -->
     </div><!-- /page -->
   </body>
