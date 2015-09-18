@@ -79,10 +79,12 @@
         function randomGame(){
           var games = getGameList();
           var text = "";
-          x = random(0,games.length);
+          var playerInfo = "";
+          var duration = "";
+          x = random(0,games.length - 1);
           var display = document.getElementById("game-spot");
-          text = text + "Testing: ";
           text = text + games[x];
+          text = text + "\n" + "Players: " + playerInfo + "\nDuration" + duration;
           display.innerHTML = text;
         }
         function selectGame(){
