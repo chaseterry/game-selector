@@ -41,7 +41,7 @@
         var catArray = [$('#strategy').is(':checked'), $('#action').is(':checked')];
         var min = document.getElementById("min-players").value;
         var max = document.getElementById("max-players").value;
-        var catArray = [$('#dice').is(':checked'), $('#starting-player').is(':checked')];
+        var appArray = [$('#dice').is(':checked'), $('#starting-player').is(':checked')];
         var game1 = new game(name, isBoard, isCard, catArray, min, max, appArray);
         addToDatabase(game1);
         alert("data input over2");
@@ -152,7 +152,7 @@
             <label for="starting-player">Starting player selector</label>
             <input type="checkbox" name="starting-player" id="starting-player">
           </fieldset>
-          <input type="submit" value="Submit" data-icon="check" data-iconpos="right" data-inline="true">
+          <!--<input type="submit" value="Submit" data-icon="check" data-iconpos="right" data-inline="true">-->
         </form>
         <a data-role="button" data-inline="true" onclick="dataInput();">Submit2</a>
       </div><!-- /content -->
