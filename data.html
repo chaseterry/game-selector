@@ -27,7 +27,7 @@
             alert("first");
             localStorage.clickcount = 1;
           }
-          document.getElementById("clickcount").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+          document.getElementById("clickcount-data").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
         }
         else{
           alert("No HTML5 Local Storage");
@@ -65,7 +65,7 @@
       
       <div data-role="main" class="ui-content" align="center">
         <h3>Local Storage testing</h3>
-        <p id="clickcount">Hello</p>
+        <p id="clickcount-data">Hello</p>
         <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p>        
         <form>
           <h1>Game Input:</h1>
