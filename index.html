@@ -25,6 +25,22 @@
       //  function fun(variable){
       //  return 3;
       // }
+      function clickCounter(){
+        if(hasLocalStorage()){
+          if(localStorage.clickcount){
+            alert("next");
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+          } 
+          else{
+            alert("first");
+            localStorage.clickcount = 1;
+          }
+          document.getElementById("clickcount").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        }
+        else{
+          alert("No HTML5 Local Storage");
+        }
+      }
     </script>
   </head>
   <body>
@@ -44,6 +60,9 @@
       
       
       <div data-role="content">
+        <h3>Local Storage testing</h3>
+        <p id="clickcount">Hello</p>
+        <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p> 
         <p>Hello Users! Nothing works yet.</p>
       </div><!-- /content -->
     </div><!-- /page -->
