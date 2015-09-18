@@ -70,6 +70,24 @@
         }
         });
         */
+        function random(min,max){
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function getGameList(){
+          return ["Dominion", "Star Realms", "Smash Up"];
+        }
+        function randomGame(){
+          var games = getGameList();
+          var text = "";
+          x = random(0,games.length);
+          var display = document.getElementById("game-spot");
+          text = text + "Testing: ";
+          text = text + games[x];
+          display.innerHTML = text;
+        }
+        function selectGame(){
+          
+        }
     </script>
   </head>
   <body>
@@ -95,6 +113,9 @@
         <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p> 
         -->
         <p>Hello Users! Nothing works yet.</p>
+        <a onclick="randomGame();" data-role="button" data-inline="true" data-transition="fade">Random Game!</a>
+        <p id="game-spot"> </p>
+        <a onclick="selectGame();" data-role="button" data-inline="true" data-transition="fade">Select this Game!</a>
       </div><!-- /content -->
     </div><!-- /page -->
   </body>
