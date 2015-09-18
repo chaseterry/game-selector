@@ -34,8 +34,38 @@
       </div> <!-- navbar -->
       
       
-      <div data-role="content">
+      <div data-role="main" class="ui-content" align="center">
         <p>Hello data</p>
+        
+        <form>
+          <h1>Game Input:</h1>
+          <label for="game-name">Name of Game:</label>
+          <input type="text" name="game-name" id="game-name" data-clear-btn="true">
+          <label for="board-or-card">Board or Card game:</label>
+            <select name="slider" id="board-or-card" data-role="slider">
+              <option value="board">Board</option>
+              <option value="card">Card</option>
+            </select>
+          <fieldset data-role="controlgroup">
+            <legend>Select All Categories:</legend>
+            <label for="strategy">Strategy</label>
+            <input type="checkbox" name="strategy" id="strategy" value="true">
+            <label for="action">Action</label>
+            <input type="checkbox" name="action" id="action" value="true">
+          </fieldset>
+          <label for="min-players">Minimum number of players:</label>
+          <input type="range" name="min-players" id="min-players" min="1" max="10" value="2">
+          <label for="max-players">Maximum number of players:</label>
+          <input type="range" name="max-players" id="max-players" min="1" max="15" value="4">
+          <fieldset data-role="controlgroup">
+            <legend>Associated Applets:</legend>
+            <label for="dice">Dice</label>
+            <input type="checkbox" name="dice" id="dice" value="true">
+            <label for="starting-player">Starting player selector</label>
+            <input type="checkbox" name="starting-player" id="starting-player" value="true">
+          </fieldset>
+          <input type="submit" value="Submit" data-icon="check" data-iconpos="right" data-inline="true">
+        </form>
       </div><!-- /content -->
     </div><!-- /page -->
   </body>
