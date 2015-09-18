@@ -32,7 +32,7 @@
       function addToDatabase(object){
         games.push(object);
         if(hasLocalStorage()){
-          if(localStorage.database){
+          if(localStorage.database == null){
             alert("next");
             localStorage.database = null;
           } 
