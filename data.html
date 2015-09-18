@@ -20,9 +20,7 @@
       var games = [];
       
       function game(name){ //, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
-        alert("Consuctor");
         this.name = name;
-        alert("Consuctor done");
         //this.isBoard = isBoard;
         //this.isCard = isCard;
        // this.minPlayers = minPlayers;
@@ -49,6 +47,7 @@
         var game1 = new game(name);//, isBoard, isCard, catArray, min, max, appArray);
         addToDatabase(game1);
         alert("data input over");
+        alert(games[0].name);
         //alert(isBoard);
         //alert(isCard);
         //alert(catArray);
