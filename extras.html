@@ -28,7 +28,7 @@
           display.innerHTML = random(1, num);
           //sleep functions are really annoying in javascript
         }
-        display.innerHTML = "" + "<font size="24">" + roll + "</font>";
+        display.innerHTML = roll;
       }
       function changeScore(num){
         var display = document.getElementById("point-spot");
@@ -86,7 +86,7 @@
         <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="fade">Roll D6</a>
         <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="fade">Roll D20</a>
         <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="fade">Roll D4</a>
-        <p id="number-spot"><font size="24">0</font></p>
+        <p id="number-spot" size="24">0</p>
         <br>
         <a href="#extraspage" data-role="button" data-inline="true" data-transition="fade">Go Back</a>
         <br>
@@ -114,7 +114,7 @@
         <a onclick="changeScore(1);" data-role="button" data-inline="true" data-transition="fade">+1</a>
         <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="fade">-5</a>
         <a onclick="changeScore(-1);" data-role="button" data-inline="true" data-transition="fade">-1</a>
-        <p id="point-spot"><font size="24">0</font></p>
+        <p id="point-spot" size="24">0</p>
         <br>
         <a href="#extraspage" data-role="button" data-inline="true" data-transition="fade">Go Back</a>
         <br>
