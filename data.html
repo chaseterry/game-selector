@@ -31,10 +31,23 @@
       
       function addToDatabase(object){
         games.push(object);
+        if(hasLocalStorage()){
+          if(localStorage.clickcount){
+            alert("next");
+            localStorage.database = localStorage.database;
+          } 
+          else{
+            alert("first");
+            localStorage.database = games;
+            alert(localStorage.database);
+          }
+        }
+        else{
+          alert("No HTML5 Local Storage");
+        }
       }
       
       function dataInput(){
-        alert("Data input");
         var name = document.getElementById("game-name").value;
         var isBoard = !!(document.getElementById("board-or-card").value);
         var isCard = !(document.getElementById("board-or-card").value);
@@ -44,14 +57,6 @@
         var appArray = [$('#dice').is(':checked'), $('#starting-player').is(':checked')];
         var game1 = new game(name, isBoard, isCard, catArray, min, max, appArray);
         addToDatabase(game1);
-        alert("data input over2");
-        alert(games[0].name);
-        alert(games[0].isBoard);
-        alert(games[0].isCard);
-        alert(games[0].categoryArray);
-        alert(games[0].minPlayers);
-        alert(games[0].maxPlayers);
-        alert(games[0].appletArray);
       }
       
       //All testing
@@ -154,7 +159,7 @@
           </fieldset>
           <!--<input type="submit" value="Submit" data-icon="check" data-iconpos="right" data-inline="true">-->
         </form>
-        <a data-role="button" data-inline="true" onclick="dataInput();">Submit2</a>
+        <a data-role="button" data-inline="true" onclick="dataInput();">Submit</a>
       </div><!-- /content -->
     </div><!-- /page -->
   </body>
