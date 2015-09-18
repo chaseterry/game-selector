@@ -74,18 +74,20 @@
           return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         function getGameList(){
-          return ["Dominion", "Star Realms", "Smash Up"];
+          return [{name:"Dominion" duration:"25-50"},{name:"Star Realms"},{name:"Smash Up"}];
         }
         function randomGame(){
           var games = getGameList();
-          var text = "";
-          var playerInfo = "";
-          var duration = "";
+          var text = "Game: ";
+          var playerInfo = "Players: ";
+          var duration = "Duration: ";
           x = random(0,games.length - 1);
-          var display = document.getElementById("game-spot");
-          text = text + games[x];
-          text = text + "\n" + "Players: " + playerInfo + "\nDuration" + duration;
-          display.innerHTML = text;
+          var displayTitle = document.getElementById("game-spot");
+          var displayDuration = document.getElementById("duration-spot");
+          duration = duration + games[x].duration;
+          text = text + games[x].name;
+          displayTitle.innerHTML = text;
+          displayDuration.innerHTML = duration;
         }
         function selectGame(){
           
@@ -117,6 +119,8 @@
         <p>Hello Users! Nothing works yet.</p>
         <a onclick="randomGame();" data-role="button" data-inline="true" data-transition="fade">Random Game!</a>
         <p id="game-spot"> </p>
+        <br>
+        <p id="duration-spot"> </p>
         <a onclick="selectGame();" data-role="button" data-inline="true" data-transition="fade">Select this Game!</a>
       </div><!-- /content -->
     </div><!-- /page -->
