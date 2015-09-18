@@ -23,22 +23,43 @@
   </head>
   <body>
     <!-- main html -->
-    <div data-role="page">
+    <div data-role="extraspage">
       <div data-role="header">
         <h1>My Title</h1>
       </div><!-- /header -->
       
       <div data-role="navbar" class="header">
         <ul>
-          <li><a href="index.html" data-transition="fade">Home</a></li>
           <li><a href="data.html" data-transition="fade">Data</a></li>
+          <li><a href="index.html" data-transition="fade">Home</a></li>
           <li><a href="extras.html" data-transition="fade">Extras</a></li>
         </ul>
       </div> <!-- navbar -->
       
       
       <div data-role="content">
-        <p>Hello extras</p>
+        <p>Hello extras, Here you will find various appletts</p>
+        <a href="#dice">Dice</a>
+      </div><!-- /content -->
+    </div><!-- /page -->
+    
+    <div data-role="dice">
+      <div data-role="header">
+        <h1>My Title</h1>
+      </div><!-- /header -->
+      
+      <div data-role="navbar" class="header">
+        <ul>
+          <li><a href="data.html" data-transition="fade">Data</a></li>
+          <li><a href="index.html" data-transition="fade">Home</a></li>
+          <li><a href="extras.html" data-transition="fade">Extras</a></li>
+        </ul>
+      </div> <!-- navbar -->
+      
+      
+      <div data-role="content">
+        <p>This is the dice!</p>
+        <a href="extraspage">Go Back</a>
       </div><!-- /content -->
     </div><!-- /page -->
   </body>
