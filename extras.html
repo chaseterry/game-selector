@@ -25,9 +25,10 @@
         var display = document.getElementById("number-spot");
         var i = 0;
         for(i = 0; i < 20; i++){
-          display.innerHTML = random (1, num);
+          display.innerHTML = "" + "<font size="24">" + random (1, num) + "</font>";
+          //sleep functions are really annoying in javascript
         }
-        display.innerHTML = roll;
+        display.innerHTML = "" + "<font size="24">" + roll + "</font>";
       }
       function changeScore(num){
         var display = document.getElementById("point-spot");
