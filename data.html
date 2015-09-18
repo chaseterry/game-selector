@@ -38,10 +38,10 @@
           } 
           else{
             alert("first");
-            localStorage.database = games;
-            alert("1: "+ localStorage.database.name);
+            localStorage.database = JSON.stringify(games);
+            alert("1: "+ JSON.parse(localStorage.database));
           }
-            alert("Always: "+ localStorage.database);
+            alert("Always: "+ JSON.parse(localStorage.database));
         }
         else{
           alert("No HTML5 Local Storage");
