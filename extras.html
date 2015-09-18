@@ -19,8 +19,8 @@
       function random(min,max){
         return Math.floor(Math.random() * (max - min + 1)) + min;
       }
-      function rolld6(){
-        var roll = random(1,6);
+      function rolldie(num){
+        var roll = random(1, num);
         var display = document.getElementById("number-spot");
         display.innerHTML = roll;
       }
@@ -44,7 +44,7 @@
       
       <div data-role="content">
         <p>Hello extras, Here you will find various appletts</p>
-        <a href="#dice" data-role="button" data-inline="true">Dice</a>
+        <a href="#dice" data-role="button" data-inline="true" data-transition="fade">Dice</a>
       </div><!-- /content -->
     </div><!-- /page -->
     
@@ -64,7 +64,9 @@
       
       <div data-role="content">
         <p>This is the dice!</p>
-        <a onclick="rolld6();" data-role="button" data-inline="true" data-transition="fade">Roll D6</a>
+        <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="fade">Roll D6</a>
+        <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="fade">Roll D20</a>
+        <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="fade">Roll D4</a>
         <p id="number-spot">0</p>
         <br>
         <a href="#extraspage" data-role="button" data-inline="true" data-transition="fade">Go Back</a>
