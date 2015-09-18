@@ -32,7 +32,7 @@
       function addToDatabase(object){
         games.push(object);
         if(hasLocalStorage()){
-          if(localStorage.clickcount){
+          if(localStorage.database){
             alert("next");
             localStorage.database = localStorage.database;
           } 
@@ -41,6 +41,7 @@
             localStorage.database = games;
             alert(localStorage.database);
           }
+            alert(localStorage.database);
         }
         else{
           alert("No HTML5 Local Storage");
