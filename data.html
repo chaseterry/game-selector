@@ -16,6 +16,42 @@
 
     <script>
       //javascript
+      
+      var games = [];
+      
+      function game(name, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
+        this.name = name;
+        this.isBoard = isBoard;
+        this.isCard = isCard;
+        this.minPlayers = minPlayers;
+        this.maxPlayers = maxPlayers;
+        this.appletArray = appletArray;
+      }
+      
+      function addToDatabase(object){
+        games.push(object);
+      }
+      
+      function dataInput(){
+        var name = document.getElementById("game-name").value;
+        var isBoard = !!(document.getElementById("board-or-card").value);
+        var isCard = !(document.getElementById("board-or-card").value);
+        var catArray = [document.getElementById("strategy").value, document.getElementById("action").value;];
+        var min = document.getElementById("min-players").value;
+        var max = document.getElementById("max-players").value;
+        var appArray = [document.getElementById("dice").value, document.getElementById("starting-player").value;];
+        var game = game(name, isBoard, isCard, catArray, min, max, appArray);
+        addToDatabase(game);
+        alert(name);
+        alert(isBoard);
+        alert(isCard);
+        alert(catArray);
+        alert(min);
+        alert(max);
+        alert(appArray);
+      }
+      
+      //All testing
       function clickCounter(){
         alert("Still broken");
         if(hasLocalStorage()){
@@ -45,6 +81,7 @@
           return false;
         }
       }
+      /*
       $(document).on("pageshow","#data",function(){
         if(hasLocalStorage()){
           if(localStorage.clickcount){
@@ -59,6 +96,8 @@
           alert("No HTML5 Local Storage");
         }
         });
+        */
+        //end testing
     </script>
   </head>
   <body>
@@ -78,9 +117,11 @@
       
       
       <div data-role="main" class="ui-content" align="center">
+        <!--
         <h3>Local Storage testing</h3>
         <p id="clickcount-data">Hello</p>
-        <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p>        
+        <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p>   
+        -->
         <form>
           <h1>Game Input:</h1>
           <label for="game-name">Name of Game:</label>
@@ -110,6 +151,7 @@
           </fieldset>
           <input type="submit" value="Submit" data-icon="check" data-iconpos="right" data-inline="true">
         </form>
+        <a onclick="dataInput();">Submit2</a>
       </div><!-- /content -->
     </div><!-- /page -->
   </body>
