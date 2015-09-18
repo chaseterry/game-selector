@@ -38,7 +38,9 @@
         var name = document.getElementById("game-name").value;
         var isBoard = !!(document.getElementById("board-or-card").value);
         var isCard = !(document.getElementById("board-or-card").value);
-        var catArray = [document.getElementById("strategy").value, document.getElementById("action").value];
+        //var catArray = [document.getElementById("strategy").value, document.getElementById("action").value];
+        var catArray = [settings.DEnabled = $("#strategy").prop("checked"), settings.DEnabled = $("#action").prop("checked")];
+
         var min = document.getElementById("min-players").value;
         var max = document.getElementById("max-players").value;
         var appArray = [document.getElementById("dice").value, document.getElementById("starting-player").value];
