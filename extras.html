@@ -23,6 +23,10 @@
       function rolldie(num){
         var roll = random(1, num);
         var display = document.getElementById("number-spot");
+        var i = 0;
+        for(i = 0; i < 20; i++){
+          display.innerHTML = random (1, num);
+        }
         display.innerHTML = roll;
       }
       function changeScore(num){
@@ -81,7 +85,7 @@
         <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="fade">Roll D6</a>
         <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="fade">Roll D20</a>
         <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="fade">Roll D4</a>
-        <p id="number-spot">0</p>
+        <p id="number-spot"><font size="24">0</font></p>
         <br>
         <a href="#extraspage" data-role="button" data-inline="true" data-transition="fade">Go Back</a>
         <br>
@@ -109,7 +113,7 @@
         <a onclick="changeScore(1);" data-role="button" data-inline="true" data-transition="fade">+1</a>
         <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="fade">-5</a>
         <a onclick="changeScore(-1);" data-role="button" data-inline="true" data-transition="fade">-1</a>
-        <p id="point-spot">0</p>
+        <p id="point-spot"><font size="24">0</font></p>
         <br>
         <a href="#extraspage" data-role="button" data-inline="true" data-transition="fade">Go Back</a>
         <br>
