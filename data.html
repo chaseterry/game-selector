@@ -19,9 +19,9 @@
       
       var games = [];
       
-      function game(name){ //, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
+      function game(name, isBoard){ //, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
         this.name = name;
-        //this.isBoard = isBoard;
+        this.isBoard = isBoard;
         //this.isCard = isCard;
        // this.minPlayers = minPlayers;
         //this.maxPlayers = maxPlayers;
@@ -38,7 +38,8 @@
         alert("Data input");
         var name = document.getElementById("game-name").value;
         alert("name: "+ name);
-        //var isBoard = !!(document.getElementById("board-or-card").value);
+        var isBoard = !!(document.getElementById("board-or-card").value);
+        alert("board: "+isBoard);
         //var isCard = !(document.getElementById("board-or-card").value);
         //var catArray = [document.getElementById("strategy").value, document.getElementById("action").value;];
         //var min = document.getElementById("min-players").value;
@@ -47,8 +48,8 @@
         var game1 = new game(name);//, isBoard, isCard, catArray, min, max, appArray);
         addToDatabase(game1);
         alert("data input over");
-        alert(games[0].name);
-        //alert(isBoard);
+        alert(games[0].isBoard);
+        alert(isBoard);
         //alert(isCard);
         //alert(catArray);
         //alert(min);
