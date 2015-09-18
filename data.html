@@ -45,11 +45,24 @@
           return false;
         }
       }
+      $(document).on("pageshow","#data",function(){
+        if(hasLocalStorage()){
+          if(localStorage.clickcount){
+          } 
+          else{
+            localStorage.clickcount = 0;
+          }
+          document.getElementById("clickcount-data").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        }
+        else{
+          alert("No HTML5 Local Storage");
+        }
+        });
     </script>
   </head>
   <body>
     <!-- main html -->
-    <div data-role="page">
+    <div data-role="page" id="#data">
       <div data-role="header">
         <h1>My Title</h1>
       </div><!-- /header -->
