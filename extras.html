@@ -15,6 +15,7 @@
     <!-- End JQuery Mobile Setup -->
 
     <script>
+    var counter = 0;
       //javascript
       function random(min,max){
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -26,7 +27,8 @@
       }
       function changeScore(num){
         var display = document.getElementById("number-spot");
-        display.innerHTML = display.value + num;
+        counter = counter + num;
+        display.innerHTML = counter;
       }
     </script>
   </head>
