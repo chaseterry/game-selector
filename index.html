@@ -54,11 +54,24 @@
           return false;
         }
       }
+      $(document).on("pageshow","#index",function(){
+        if(hasLocalStorage()){
+          if(localStorage.clickcount){
+          } 
+          else{
+            localStorage.clickcount = 0;
+          }
+          document.getElementById("clickcount-index").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+        }
+        else{
+          alert("No HTML5 Local Storage");
+        }
+        });
     </script>
   </head>
   <body>
     <!-- main html -->
-    <div data-role="index">
+    <div data-role="page" id="#index">
       <div data-role="header">
         <h1>Game Selector</h1>
       </div><!-- /header -->
