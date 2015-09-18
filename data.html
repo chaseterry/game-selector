@@ -19,13 +19,13 @@
       
       var games = [];
       
-      function game(name, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
+      function game(name){ //, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
         this.name = name;
-        this.isBoard = isBoard;
-        this.isCard = isCard;
-        this.minPlayers = minPlayers;
-        this.maxPlayers = maxPlayers;
-        this.appletArray = appletArray;
+        //this.isBoard = isBoard;
+        //this.isCard = isCard;
+       // this.minPlayers = minPlayers;
+        //this.maxPlayers = maxPlayers;
+        //this.appletArray = appletArray;
       }
       
       function addToDatabase(object){
@@ -34,21 +34,21 @@
       
       function dataInput(){
         var name = document.getElementById("game-name").value;
-        var isBoard = !!(document.getElementById("board-or-card").value);
-        var isCard = !(document.getElementById("board-or-card").value);
-        var catArray = [document.getElementById("strategy").value, document.getElementById("action").value;];
-        var min = document.getElementById("min-players").value;
-        var max = document.getElementById("max-players").value;
-        var appArray = [document.getElementById("dice").value, document.getElementById("starting-player").value;];
-        var game = game(name, isBoard, isCard, catArray, min, max, appArray);
+        //var isBoard = !!(document.getElementById("board-or-card").value);
+        //var isCard = !(document.getElementById("board-or-card").value);
+        //var catArray = [document.getElementById("strategy").value, document.getElementById("action").value;];
+        //var min = document.getElementById("min-players").value;
+        //var max = document.getElementById("max-players").value;
+        //var appArray = [document.getElementById("dice").value, document.getElementById("starting-player").value;];
+        var game = game(name  );//, isBoard, isCard, catArray, min, max, appArray);
         addToDatabase(game);
         alert(name);
-        alert(isBoard);
-        alert(isCard);
-        alert(catArray);
-        alert(min);
-        alert(max);
-        alert(appArray);
+        //alert(isBoard);
+        //alert(isCard);
+        //alert(catArray);
+        //alert(min);
+        //alert(max);
+        //alert(appArray);
       }
       
       //All testing
