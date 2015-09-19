@@ -95,8 +95,9 @@
       function showList(){
         alert("show list start");
         if(hasLocalStorage()){
+          alert("has local storage");
           var newDatabase = JSON.parse(localStorage.database);
-          alert("name of 1: "+newDatabase[0].name);
+          alert("name of 1: "+ newDatabase[0].name);
           document.getElementById("result-1").innerHTML = database[0].name;
           document.getElementById("result-2").innerHTML = database[1].name;
           //document.getElementById("result-3").innerHTML = computeResult(3);
