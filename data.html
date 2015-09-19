@@ -30,11 +30,13 @@
       }
       
       function addToDatabase(object){
-        games.push(object);
         if(hasLocalStorage()){
           if(localStorage.database){
             alert("next");
             //games.sort(function(a, b){return a.name.localeCompare(b.name)});
+            var oldDatabase = JSON.parse(localStorage.database);
+            games = oldDatabase;
+            games.push(object);
             localStorage.database = JSON.stringify(games);
           } 
           else{
