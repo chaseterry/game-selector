@@ -33,15 +33,16 @@
         games.push(object);
         if(hasLocalStorage()){
           if(localStorage.database){
-            alert("first");
+            alert("next");
+            points.sort(function(a, b){return a.name.localeCompare(b.name)});
             localStorage.database = JSON.stringify(games);
           } 
           else{
-            alert("next");
+            alert("first");
             localStorage.database = JSON.stringify(games);
-            var newDatabase = JSON.parse(localStorage.database);
-            alert("Should name: " + newDatabase[0].name);
           }
+          var newDatabase = JSON.parse(localStorage.database);
+          alert("Should name: " + newDatabase[newDatabase.length-1].name);
         }
         else{
           alert("No HTML5 Local Storage");
@@ -125,12 +126,13 @@
       </div> <!-- navbar -->
       
       
-      <div data-role="main" class="ui-content" align="center">
+      <div data-role="main" class="ui-content" align="center" id="#data">
         <!--
         <h3>Local Storage testing</h3>
         <p id="clickcount-data">Hello</p>
         <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p>   
         -->
+        <a href="#edit" data-role="button" data-mini="true" align="right" data-inline="true">Edit/view list</a>
         <form>
           <h1>Game Input:</h1>
           <label for="game-name">Name of Game:</label>
@@ -163,5 +165,36 @@
         <a data-role="button" data-inline="true" onclick="dataInput();">Submit</a>
       </div><!-- /content -->
     </div><!-- /page -->
+    
+    <div data-role="page" id="#data">
+      <div data-role="header">
+        <h1>My Title</h1>
+      </div><!-- /header -->
+      
+      <div data-role="navbar" class="header">
+        <ul>
+          <li><a href="data.html" data-transition="fade" class="ui-btn-active ui-state-persist">Data</a></li>
+          <li><a href="index.html" data-transition="slide">Home</a></li>
+          <li><a href="extras.html" data-transition="slide">Extras</a></li>
+        </ul>
+      </div> <!-- navbar -->
+      
+      
+      <div data-role="main" class="ui-content" align="center" id="#edit">
+        <a href="#data" data-role="button" data-mini="true" align="right" data-inline="true">Go back</a>
+        <h1>List:</h1>
+        <ul data-role="listview" data-filter="true" data-inset="true">
+          <li id="result-1">result-1 <span class="ui-li-count">result-2-count</span></li>
+          <li id="result-2">result-2 </li>
+          <li id="result-3">result-3 </li>
+          <li id="result-4">result-4 </li>
+          <li id="result-5">result-5 <span class="ui-li-count">result-5-count</span></li>
+          <li id="result-6">result-6 <span class="ui-li-count">result-6-count</span></li>
+        </ul>
+        
+      </div><!-- /content -->
+    </div><!-- /page -->
+    
+    
   </body>
 </html>
