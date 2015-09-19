@@ -42,6 +42,10 @@
             localStorage.database = JSON.stringify(games);
           }
           var temp = JSON.parse(localStorage.database);
+          alert("name: " + temp[0].name);
+          alert("name: " + temp[1].name);
+          alert("name: " + temp[2].name);
+          alert("name: " + temp[3].name);
           alert("name: " + temp[temp.length-1].name);
         }
         else{
