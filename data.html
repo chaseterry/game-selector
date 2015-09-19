@@ -17,7 +17,6 @@
     <script>
       //javascript
       
-      localStorage.database = null;
       var games = [];
       
       function game(name, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
@@ -33,18 +32,16 @@
       function addToDatabase(object){
         games.push(object);
         if(hasLocalStorage()){
-          if(localStorage.database == null){
-            alert("next");
-            localStorage.database = null;
+          if(localStorage.database){
+            alert("first");
+            localStorage.database = JSON.stringify(games);
           } 
           else{
-            alert("first");
+            alert("next");
             localStorage.database = JSON.stringify(games);
             var newDatabase = JSON.parse(localStorage.database);
             alert("Should name: " + newDatabase[0].name);
-            alert("1: "+ JSON.parse(localStorage.database));
           }
-            alert("Always: "+ JSON.parse(localStorage.database));
         }
         else{
           alert("No HTML5 Local Storage");
