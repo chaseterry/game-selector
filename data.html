@@ -39,9 +39,9 @@
           } 
           else{
             alert("first");
-            localStorage.database = JSON.stringify(object);
+            localStorage.database = JSON.stringify(games);
             var newDatabase = JSON.parse(localStorage.database);
-            alert("Should name: " + newDatabase.name);
+            alert("Should name: " + newDatabase[0].name);
             alert("1: "+ JSON.parse(localStorage.database));
           }
             alert("Always: "+ JSON.parse(localStorage.database));
