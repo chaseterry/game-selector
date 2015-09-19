@@ -42,11 +42,11 @@
             localStorage.database = JSON.stringify(games);
           }
           var temp = JSON.parse(localStorage.database);
-          alert("name: " + temp[0].name);
-          alert("name: " + temp[1].name);
-          alert("name: " + temp[2].name);
-          alert("name: " + temp[3].name);
-          alert("name: " + temp[temp.length-1].name);
+          alert("name1 : " + temp[0].name);
+          alert("name2 : " + temp[1].name);
+          alert("name3 : " + temp[2].name);
+          alert("name4 : " + temp[3].name);
+          alert("name last: " + temp[temp.length-1].name);
         }
         else{
           alert("No HTML5 Local Storage");
