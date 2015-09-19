@@ -91,23 +91,22 @@
           return false;
         }
       }
-      /*
-      $(document).on("pageshow","#data",function(){
-        if(hasLocalStorage()){
-          if(localStorage.clickcount){
-          } 
-          else{
-            localStorage.clickcount = 0;
-          }
-          document.getElementById("clickcount-data").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-          alert("show");
-        }
-        else{
-          alert("No HTML5 Local Storage");
-        }
-        });
-        */
-        //end testing
+      
+      function showList(){
+        var database = JSON.parse(localStorage.database);
+        document.getElementById("result-1").innerHTML = database[0].name;
+        document.getElementById("result-2").innerHTML = database[1].name;
+        document.getElementById("result-3").innerHTML = computeResult(3);
+        document.getElementById("result-4").innerHTML = computeResult(4);
+        document.getElementById("result-5").innerHTML = computeResult(5);
+        document.getElementById("result-6").innerHTML = computeResult(6);
+      }
+      
+      $(document).on("pageshow","#edit",function(){
+        showList();
+      });
+      
+      
     </script>
   </head>
   <body>
