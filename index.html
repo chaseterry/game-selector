@@ -122,7 +122,44 @@
         <p id="game-spot"> </p>
         <p id="pladur-spot"> </p>
         <p id="type-spot"> </p>
-        <a onclick="selectGame();" data-role="button" data-inline="true" data-transition="fade">Select this Game!</a>
+        <a href="#gameselected" onclick="selectGame();" data-role="button" data-inline="true" data-transition="fade">Select this Game!</a>
+      </div><!-- /content -->
+    </div><!-- /page -->
+    
+    
+        <div data-role="page" id="gameselected">
+      <div data-role="header">
+        <h1>Game Selector</h1>
+      </div><!-- /header -->
+      <div data-role="navbar" class="header">
+        <ul>
+          <li><a href="data.html" data-transition="slide" data-direction="reverse">Data</a></li>
+          <li><a href="index.html" data-transition="fade" class="ui-btn-active ui-state-persist">Home</a></li>
+          <li><a href="extras.html" data-transition="slide">Extras</a></li>
+        </ul>
+      </div>
+      
+      <div data-role="content">
+        <!--
+        <h3>Local Storage testing</h3>
+        <p id="clickcount-index">Hello</p>
+        <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p> 
+        -->
+        <p id="title-spot"> </p>
+        <div data-role="footer">
+          <a href="#popPerson" class="ui-btn ui-icon-plus ui-btn-icon-left" data-position-to="window">First Person</a>
+          <a href="#popPoints" class="ui-btn ui-icon-plus ui-btn-icon-left" data-position-to="window">Points</a>
+          <a href="#popDice" class="ui-btn ui-icon-plus ui-btn-icon-left" data-position-to="window">Dice</a>
+          <div data-role="popup" id="popPoints">
+           <p>Points</p>
+          </div>
+         <div data-role="popup" id="popPerson">
+           <p>First Person</p>
+         </div>
+         <div data-role="popup" id="popDice">
+          <p>Dice</p>
+         </div>
+        </div>
       </div><!-- /content -->
     </div><!-- /page -->
   </body>
