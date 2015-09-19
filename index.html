@@ -83,11 +83,12 @@
           var duration = "Duration: ";
           x = random(0,games.length - 1);
           var displayTitle = document.getElementById("game-spot");
-          var displayDuration = document.getElementById("duration-spot");
+          var displayDuration = document.getElementById("pladur-spot");
           //duration = duration + games[x].duration;
+          playerInfo = playerInfo + games[x].minPlayer + "-" + games[x].maxPlayer;
           text = text + games[x].name;
           displayTitle.innerHTML = text;
-          displayDuration.innerHTML = duration;
+          displayDuration.innerHTML = duration + playerInfo;
         }
         function selectGame(){
           
@@ -117,10 +118,10 @@
         <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p> 
         -->
         <p>Hello! Edit your list of games in the "Data" tab, and come back here to randomize!</p>
-        <a onclick="randomGame();" data-role="button" data-inline="true" data-transition="fade">Random Games!</a>
+        <a onclick="randomGame();" data-role="button" data-inline="true" data-transition="fade">Random Game!</a>
         <p id="game-spot"> </p>
-        <br>
-        <p id="duration-spot"> </p>
+        <p id="pladur-spot"> </p>
+        <p id="type-spot"> </p>
         <a onclick="selectGame();" data-role="button" data-inline="true" data-transition="fade">Select this Game!</a>
       </div><!-- /content -->
     </div><!-- /page -->
