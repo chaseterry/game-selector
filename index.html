@@ -74,7 +74,7 @@
           return Math.floor(Math.random() * (max - min + 1)) + min;
         }
         function getGameList(){
-          return [{name:"Dominion" duration:"25-50"},{name:"Star Realms"},{name:"Smash Up"}];
+          return JSON.parse(localStorage.database);
         }
         function randomGame(){
           var games = getGameList();
@@ -84,7 +84,7 @@
           x = random(0,games.length - 1);
           var displayTitle = document.getElementById("game-spot");
           var displayDuration = document.getElementById("duration-spot");
-          duration = duration + games[x].duration;
+          //duration = duration + games[x].duration;
           text = text + games[x].name;
           displayTitle.innerHTML = text;
           displayDuration.innerHTML = duration;
