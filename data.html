@@ -132,7 +132,7 @@
         <p id="clickcount-data">Hello</p>
         <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p>   
         -->
-        <a href="#edit" data-role="button" data-mini="true" align="right" data-inline="true">Edit/view list</a>
+        <a href="#edit" data-role="button" onclick="dataList();" data-inline="true">Edit/view list</a>
         <form>
           <h1>Game Input:</h1>
           <label for="game-name">Name of Game:</label>
@@ -179,12 +179,11 @@
         </ul>
       </div> <!-- navbar -->
       
-      
       <div data-role="main" class="ui-content" align="center" id="#edit">
         <a href="#data" data-role="button" data-mini="true" align="right" data-inline="true">Go back</a>
         <h1>List:</h1>
         <ul data-role="listview" data-filter="true" data-inset="true">
-          <li id="result-1">result-1 <span class="ui-li-count">result-2-count</span></li>
+          <li id="result-1"><span class="ui-li-count">result-2-count</span></li>
           <li id="result-2">result-2 </li>
           <li id="result-3">result-3 </li>
           <li id="result-4">result-4 </li>
