@@ -64,6 +64,8 @@
       
       function deleteGame(number){
         alert("Attempt delete");
+        alert("test: "+number);
+        return;
         var newGames = [];
         for(i = 0; i < number; i++)
         {
@@ -116,7 +118,7 @@
           //document.getElementById("result-1").innerHTML = newDatabase[0].name;
           var x = 1;
           document.getElementById("result-1").innerHTML = "<li <p>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>H</a></li>"
-          document.getElementById("result-2").innerHTML = "<li id='result-2' data-icon='delete'>"+newDatabase[x].name+"<a onclick='deleteGame()'>data-icon='delete'</a></li>";
+          //document.getElementById("result-2").innerHTML = "<li id='result-2' data-icon='delete'>"+newDatabase[x].name+"<a onclick='deleteGame()'>data-icon='delete'</a></li>";
           document.getElementById("result-3").innerHTML = newDatabase[2].name;
           //document.getElementById("result-4").innerHTML = computeResult(4);
           //document.getElementById("result-5").innerHTML = computeResult(5);
@@ -205,7 +207,7 @@
             id="result-1">result-1 <span class="ui-li-count">result-2-count</span>
             <a onclick="deleteGame(0);">Delete item</a>
           </li>
-          <li id="result-2" data-icon="delete"><a onclick="deleteGame()">data-icon="delete"</a></li>
+          <li id="result-2" data-icon="delete"><a onclick="deleteGame(5)">data-icon="delete"</a></li>
           <li id="result-3">result-3 </li>
           <li id="result-4">result-4 </li>
           <li id="result-5">result-5 <span class="ui-li-count">result-5-count</span></li>
