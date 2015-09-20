@@ -119,7 +119,7 @@
           var x = 1;
           document.getElementById("result-1").innerHTML = "<li <p>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>H</a></li>"
           //document.getElementById("result-2").innerHTML = "<li id='result-2' data-icon='delete'>"+newDatabase[x].name+"<a onclick='deleteGame()'>data-icon='delete'</a></li>";
-          document.getElementById("result-3").innerHTML = newDatabase[2].name;
+          document.getElementById("result-3").innerHTML = ""+newDatabase[x].name+"<a onclick='deleteGame(10)'>data-icon='delete'</a></li>";
           //document.getElementById("result-4").innerHTML = computeResult(4);
           //document.getElementById("result-5").innerHTML = computeResult(5);
           //document.getElementById("result-6").innerHTML = computeResult(6);
@@ -202,7 +202,7 @@
         <a href="#datapage" data-role="button" data-mini="true" align="right" data-inline="true" data-transition="none">Go back</a>
         <a data-role="button" data-mini="true" align="right" onclick="showList();" data-inline="true">Edit/view list</a>
         <h1 align="center" >List:</h1>
-        <ul data-role="listview" data-split-icon="gear" data-filter="true" data-inset="true" align="center">
+        <ul data-role="listview" data-filter="true" data-inset="true" align="center">
           <li 
             id="result-1">result-1 <span class="ui-li-count">result-2-count</span>
             <a onclick="deleteGame(0);">Delete item</a>
