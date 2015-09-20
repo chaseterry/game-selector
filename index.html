@@ -168,24 +168,67 @@
         <p><a data-role="button" data-inline="true" onclick="clickCounter();">Increase Counter!</a></p> 
         -->
         <p id="title-spot"> </p>
-          <a href="#popPerson" data-role="button" data-rel="popup" data-inline="true" data-position-to="window">First Person</a>
+          <a href="#popPerson" data-role="button" data-inline="true">First Person</a>
           <a href="#popPoints" data-role="button" data-inline="true">Points</a>
-          <a href="#popDice" data-rel="popup" data-inline="true" data-position-to="window">Dice</a>
-          <div data-role="popup" id="popPoints">
-           <p>Points</p>
-          </div>
-         <div data-role="popup" id="popPerson">
-           <p>First Person</p>
-         </div>
-         <div data-role="popup" id="popDice">
+          <a href="#popDice" data-role="button" data-inline="true">Dice</a>
+      </div><!-- /content -->
+    </div><!-- /page -->
+    <div data-role="page" id="popPerson">
+      <div data-role="header">
+        <h1>Game Selector</h1>
+      </div><!-- /header -->
+      <div data-role="navbar" class="header">
+        <ul>
+          <li><a href="data.html" data-transition="slide" data-direction="reverse" rel="external">Data</a></li>
+          <li><a href="index.html" data-transition="fade" class="ui-btn-active ui-state-persist">Home</a></li>
+          <li><a href="extras.html" data-transition="slide" rel="external">Extras</a></li>
+        </ul>
+      </div>
+        <a href="#randchoice" data-role="button" data-inline="true" data-transition="none">Random Choice</a>
+        <a onclick="suggestion();" data-role="button" data-inline="true" data-transition="none">Fun Method!(3+)</a>
+        <p id="suggestion-spot"> </p>
+        <br>
+        <a href="#extraspage" data-role="button" data-inline="true" data-transition="none">Go Back</a>
+        <br>
+        <p id="point-spot" size="24">0</p>
+    </div>
+    <div data-role="page" id="popPoints">
+      <div data-role="header">
+        <h1>Game Selector</h1>
+      </div><!-- /header -->
+      <div data-role="navbar" class="header">
+        <ul>
+          <li><a href="data.html" data-transition="slide" data-direction="reverse" rel="external">Data</a></li>
+          <li><a href="index.html" data-transition="fade" class="ui-btn-active ui-state-persist">Home</a></li>
+          <li><a href="extras.html" data-transition="slide" rel="external">Extras</a></li>
+        </ul>
+      </div>
+        <div data-role="controlgroup" data-type="horizontal">
+        <a onclick="changeScore(5);" data-role="button" data-inline="true" data-transition="none">+5</a>
+        <a onclick="changeScore(1);" data-role="button" data-inline="true" data-transition="none">+1</a>
+        <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="none">-5</a>
+        <a onclick="changeScore(-1);" data-role="button" data-inline="true" data-transition="none">-1</a>
+        </div>
+        <p id="point-spot" size="24">0</p>
+    </div>
+    <div data-role="page" id="popDice">
+      <div data-role="header">
+        <h1>Game Selector</h1>
+      </div><!-- /header -->
+      <div data-role="navbar" class="header">
+        <ul>
+          <li><a href="data.html" data-transition="slide" data-direction="reverse" rel="external">Data</a></li>
+          <li><a href="index.html" data-transition="fade" class="ui-btn-active ui-state-persist">Home</a></li>
+          <li><a href="extras.html" data-transition="slide" rel="external">Extras</a></li>
+        </ul>
+      </div>
            <div data-role="controlgroup" data-type="horizontal">
             <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="none">Roll D6</a>
             <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="none">Roll D20</a>
             <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="none">Roll D4</a>
             <p id="number-spot" size="24">0</p>
+            <a href="#gameselected" data-role="button" data-inline="true" data-transition="none">Go Back</a>
            </div>
-         </div>
-      </div><!-- /content -->
-    </div><!-- /page -->
+    </div>
   </body>
 </html>
