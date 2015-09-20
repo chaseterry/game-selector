@@ -120,6 +120,12 @@
           alert("try change");
           var newDatabase = JSON.parse(localStorage.database);
           document.getElementById("res1").innerHTML = newDatabase[0].name;
+          document.getElementById("res2").innerHTML = newDatabase[1].name;
+          document.getElementById("res3").innerHTML = newDatabase[2].name;
+          document.getElementById("res4").innerHTML = newDatabase[3].name;
+          document.getElementById("res5").innerHTML = newDatabase[4].name;
+          document.getElementById("res6").innerHTML = newDatabase[5].name;
+
           var x = 1;
           //document.getElementById("result-1").innerHTML = "<li <p>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>H</a></li>"
           //document.getElementById("result-2").innerHTML = "<li id='result-2' data-icon='delete'>"+newDatabase[x].name+"<a onclick='deleteGame()'>data-icon='delete'</a></li>";
@@ -208,7 +214,7 @@
         <a data-role="button" data-mini="true" align="right" onclick="showList();" data-inline="true">Edit/view list</a>
         <h1 align="center" >List:</h1>
         <ul data-role="listview" data-split-icon="delete" data-filter="true" data-inset="true" align="center">
-          <li id="result-1" ><a onclick="" id="res1">Result-1</a><a onclick="deleteGame(1);">result-1</a></li>
+          <li id="result-1" ><a onclick="editGame(1);" id="res1">Result-1</a><a onclick="deleteGame(1);">result-1</a></li>
           <li id="result-2" ><a onclick="">Result-2</a><a onclick="deleteGame(2);">result-2</a></li>
           <li id="result-3" ><a onclick="">Result-3</a><a onclick="deleteGame(3);">result-3</a></li>
           <li id="result-4" ><a onclick="">Result-4</a><a onclick="deleteGame(4);">result-4</a></li>
