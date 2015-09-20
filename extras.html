@@ -84,9 +84,11 @@
       
       <div data-role="content" align="center">
         <p>This is the dice!</p>
-        <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="none">Roll D6</a>
-        <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="none">Roll D20</a>
-        <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="none">Roll D4</a>
+          <div data-role="controlgroup" data-type="horizontal">
+            <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="none">Roll D6</a>
+            <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="none">Roll D20</a>
+            <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="none">Roll D4</a>
+          </div>
         <p id="number-spot" size="24">0</p>
         <br>
         <a href="#extraspage" data-role="button" data-inline="true" data-transition="none">Go Back</a>
@@ -111,10 +113,12 @@
       
       <div data-role="content" align="center">
         <p>Points</p>
+        <div data-role="controlgroup" data-type="horizontal">
         <a onclick="changeScore(5);" data-role="button" data-inline="true" data-transition="none">+5</a>
         <a onclick="changeScore(1);" data-role="button" data-inline="true" data-transition="none">+1</a>
         <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="none">-5</a>
         <a onclick="changeScore(-1);" data-role="button" data-inline="true" data-transition="none">-1</a>
+        </div>
         <p id="point-spot" size="24">0</p>
         <br>
         <a href="#extraspage" data-role="button" data-inline="true" data-transition="none">Go Back</a>
