@@ -178,11 +178,12 @@
            <p>First Person</p>
          </div>
          <div data-role="popup" id="popDice">
-        <p>This is the dice!</p>
-        <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="none">Roll D6</a>
-        <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="none">Roll D20</a>
-        <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="none">Roll D4</a>
-        <p id="number-spot" size="24">0</p>
+           <div data-role="controlgroup" data-type="horizontal">
+            <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="none">Roll D6</a>
+            <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="none">Roll D20</a>
+            <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="none">Roll D4</a>
+            <p id="number-spot" size="24">0</p>
+           </div>
          </div>
       </div><!-- /content -->
     </div><!-- /page -->
