@@ -20,11 +20,12 @@
       
       var games = [];
       
-      function game(name, isBoard, isCard, categoryArray, minPlayers, maxPlayers, appletArray){
+      function game(name, isBoard, isCard, categoryArray, duration, minPlayers, maxPlayers, appletArray){
         this.name = name;
         this.isBoard = isBoard;
         this.isCard = isCard;
         this.categoryArray = categoryArray;
+        this.duration = duration;
         this.minPlayers = minPlayers;
         this.maxPlayers = maxPlayers;
         this.appletArray = appletArray;
@@ -56,6 +57,7 @@
         var isBoard = !!(document.getElementById("board-or-card").value);
         var isCard = !(document.getElementById("board-or-card").value);
         var catArray = [$('#strategy').is(':checked'), $('#action').is(':checked')];
+        var duration = document.getElementById("duration").value;
         var min = document.getElementById("min-players").value;
         var max = document.getElementById("max-players").value;
         var appArray = [$('#dice').is(':checked'), $('#starting-player').is(':checked')];
@@ -187,6 +189,8 @@
             <label for="action">Action</label>
             <input type="checkbox" name="action" id="action">
           </fieldset>
+          <label for="duration">Game Duration:</label>
+          <input type="range" name="duration" id="duration" min="15" max="180" value="30">
           <label for="min-players">Minimum number of players:</label>
           <input type="range" name="min-players" id="min-players" min="1" max="10" value="2">
           <label for="max-players">Maximum number of players:</label>
