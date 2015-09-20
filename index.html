@@ -187,10 +187,7 @@
         <a href="#randchoice" data-role="button" data-inline="true" data-transition="none">Random Choice</a>
         <a onclick="suggestion();" data-role="button" data-inline="true" data-transition="none">Fun Method!(3+)</a>
         <p id="suggestion-spot"> </p>
-        <br>
-        <a href="#extraspage" data-role="button" data-inline="true" data-transition="none">Go Back</a>
-        <br>
-        <p id="point-spot" size="24">0</p>
+        <a href="#gameselected" data-role="button" data-inline="true" data-transition="none">Go Back</a>
     </div>
     <div data-role="page" id="popPoints">
       <div data-role="header">
@@ -204,12 +201,13 @@
         </ul>
       </div>
         <div data-role="controlgroup" data-type="horizontal">
-        <a onclick="changeScore(5);" data-role="button" data-inline="true" data-transition="none">+5</a>
         <a onclick="changeScore(1);" data-role="button" data-inline="true" data-transition="none">+1</a>
-        <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="none">-5</a>
         <a onclick="changeScore(-1);" data-role="button" data-inline="true" data-transition="none">-1</a>
+        <a onclick="changeScore(5);" data-role="button" data-inline="true" data-transition="none">+5</a>
+        <a onclick="changeScore(-5);" data-role="button" data-inline="true" data-transition="none">-5</a>
         </div>
         <p id="point-spot" size="24">0</p>
+        <a href="#gameselected" data-role="button" data-inline="true" data-transition="none">Go Back</a>
     </div>
     <div data-role="page" id="popDice">
       <div data-role="header">
