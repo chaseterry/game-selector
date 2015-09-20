@@ -97,9 +97,9 @@
         if(hasLocalStorage()){
           alert("try change");
           var newDatabase = JSON.parse(localStorage.database);
-          document.getElementById("result-1").innerHTML = newDatabase[0].name;
+          //document.getElementById("result-1").innerHTML = newDatabase[0].name;
           var x = 0;
-          //document.getElementById("result-1").innerHTML = "<li <pid='result-1'>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>Delete item</a></li>"
+          document.getElementById("result-1").innerHTML = "<li <p>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>H</a></li>"
           document.getElementById("result-2").innerHTML = newDatabase[1].name;
           document.getElementById("result-3").innerHTML = newDatabase[2].name;
           //document.getElementById("result-4").innerHTML = computeResult(4);
