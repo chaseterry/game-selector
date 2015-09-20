@@ -148,7 +148,7 @@
         -->
         <p id="title-spot"> </p>
           <a href="#popPerson" data-rel="popup" data-inline="true" data-position-to="window">First Person</a>
-          <a href="#popPoints" data-rel="popup" data-inline="true" data-position-to="window">Point</a>
+          <a href="#popPoints" data-rel="popup" data-inline="true" data-position-to="window">Points</a>
           <a href="#popDice" data-rel="popup" data-inline="true" data-position-to="window">Dice</a>
           <div data-role="popup" id="popPoints">
            <p>Points</p>
@@ -157,7 +157,11 @@
            <p>First Person</p>
          </div>
          <div data-role="popup" id="popDice">
-          <p>Dice</p>
+        <p>This is the dice!</p>
+        <a onclick="rolldie(6);" data-role="button" data-inline="true" data-transition="none">Roll D6</a>
+        <a onclick="rolldie(20);" data-role="button" data-inline="true" data-transition="none">Roll D20</a>
+        <a onclick="rolldie(4);" data-role="button" data-inline="true" data-transition="none">Roll D4</a>
+        <p id="number-spot" size="24">0</p>
          </div>
       </div><!-- /content -->
     </div><!-- /page -->
