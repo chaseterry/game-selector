@@ -119,14 +119,15 @@
         if(hasLocalStorage()){
           alert("try change");
           var newDatabase = JSON.parse(localStorage.database);
-          //document.getElementById("result-1").innerHTML = newDatabase[0].name;
+          document.getElementById("res1").innerHTML = newDatabase[0].name;
           var x = 1;
-          document.getElementById("result-1").innerHTML = "<li <p>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>H</a></li>"
+          //document.getElementById("result-1").innerHTML = "<li <p>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>H</a></li>"
           //document.getElementById("result-2").innerHTML = "<li id='result-2' data-icon='delete'>"+newDatabase[x].name+"<a onclick='deleteGame()'>data-icon='delete'</a></li>";
-          document.getElementById("result-3").innerHTML = ""+newDatabase[x].name+"<a onclick='deleteGame(10)'>data-icon='delete'</a></li>";
+          //document.getElementById("result-3").innerHTML = ""+newDatabase[x].name+"<a onclick='deleteGame(10)'>data-icon='delete'</a></li>";
           //document.getElementById("result-4").innerHTML = computeResult(4);
-          document.getElementById("result-5").innerHTML = newDatabase[1].name;
+          //document.getElementById("result-5").innerHTML = newDatabase[1].name;
           //document.getElementById("result-6").innerHTML = computeResult(6);
+          
         }
       }
       
@@ -207,15 +208,12 @@
         <a data-role="button" data-mini="true" align="right" onclick="showList();" data-inline="true">Edit/view list</a>
         <h1 align="center" >List:</h1>
         <ul data-role="listview" data-split-icon="delete" data-filter="true" data-inset="true" align="center">
-          <li 
-            id="result-1">result-1
-            <a onclick="deleteGame(0);">Delete item</a>
-          </li>
-          <li id="result-2" data-icon="delete"><a onclick="deleteGame(2)">result-2</a></li>
-          <li id="result-3" data-icon="delete"><a onclick="deleteGame(3);">result-3</a></li>
-          <li id="result-4" ><a onclick="editGame(4);">Edit result-4</a><a onclick="deleteGame(4);">result-4</a></li>
-          <li id="result-5" ><a onclick="editGame(5);">Edit result-5</a><a onclick="deleteGame(5);">result-5</a></li>
-          <li id="result-6" ><a onclick="editGame(6);">Edit result-6</a><a onclick="deleteGame(6);">result-6</a></li>
+          <li id="result-1" ><a onclick="" id="res1">Result-1</a><a onclick="deleteGame(1);">result-1</a></li>
+          <li id="result-2" ><a onclick="">Result-2</a><a onclick="deleteGame(2);">result-2</a></li>
+          <li id="result-3" ><a onclick="">Result-3</a><a onclick="deleteGame(3);">result-3</a></li>
+          <li id="result-4" ><a onclick="">Result-4</a><a onclick="deleteGame(4);">result-4</a></li>
+          <li id="result-5" ><a onclick="">Result-5</a><a onclick="deleteGame(5);">result-5</a></li>
+          <li id="result-6" ><a onclick="">Result-6</a><a onclick="deleteGame(6);">result-6</a></li>
         </ul>
         
       </div><!-- /content -->
