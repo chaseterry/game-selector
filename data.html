@@ -202,15 +202,15 @@
         <a href="#datapage" data-role="button" data-mini="true" align="right" data-inline="true" data-transition="none">Go back</a>
         <a data-role="button" data-mini="true" align="right" onclick="showList();" data-inline="true">Edit/view list</a>
         <h1 align="center" >List:</h1>
-        <ul data-role="listview" data-filter="true" data-inset="true" align="center">
+        <ul data-role="listview" data-split-icon="delete" data-filter="true" data-inset="true" align="center">
           <li 
-            id="result-1">result-1 <span class="ui-li-count">result-2-count</span>
+            id="result-1">result-1
             <a onclick="deleteGame(0);">Delete item</a>
           </li>
           <li id="result-2" data-icon="delete"><a onclick="deleteGame(2)"></a></li>
-          <li id="result-3">result-3 </li>
-          <li data-icon="delete"><a onclick="deleteGame(4);">result-4</a></li>
-          <li id="result-5" data-icon="delete">Hello</li>
+          <li id="result-3" data-icon="delete"><a onclick="deleteGame(3);">result-3</a></li>
+          <li id="result-4" ><a onclick="edit();">Edit result-4</a><a onclick="deleteGame(4);">result-4</a></li>
+          <li id="result-5" ><a onclick="deleteGame(5);">result-5</a></li>
           <li id="result-6">result-6 <span class="ui-li-count">result-6-count</span></li>
         </ul>
         
