@@ -62,6 +62,22 @@
         addToDatabase(game1);
       }
       
+      function deleteGame(number){
+        alert("Attempt delete");
+        var newGames = [];
+        for(i = 0; i < number; i++)
+        {
+          newGames.push(games[i]);
+        }
+        for(j = number + 1; j < games.length; j++)
+        {
+          newGames.push(games[j]); 
+        }
+        alert("deleted: "+games[number].name);
+        games = newGames;
+      }
+
+      
       //All testing
       function clickCounter(){
         alert("Still broken");
