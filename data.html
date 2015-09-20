@@ -133,6 +133,13 @@
           //document.getElementById("result-4").innerHTML = computeResult(4);
           //document.getElementById("result-5").innerHTML = newDatabase[1].name;
           //document.getElementById("result-6").innerHTML = computeResult(6);
+          for(i = 7; i<8; i++)
+          {
+          document.getElementById("result-7").innerHTML = '<li id="result-7"><a onclick="" id="res6">Result-7</a><a onclick="deleteGame(7);">result-7</a></li>';
+
+          }
+          document.getElementById("result-8").innerHTML =  'id="result-8"><a onclick="" id="res8">Result-8</a><a onclick="deleteGame(8);">result-8</a></li>';
+
           
         }
       }
@@ -214,12 +221,14 @@
         <a data-role="button" data-mini="true" align="right" onclick="showList();" data-inline="true">Edit/view list</a>
         <h1 align="center" >List:</h1>
         <ul data-role="listview" data-split-icon="delete" data-filter="true" data-inset="true" align="center">
-          <li id="result-1" ><a onclick="editGame(1);" id="res1">Result-1</a><a onclick="deleteGame(1);">result-1</a></li>
-          <li id="result-2" ><a onclick="">Result-2</a><a onclick="deleteGame(2);">result-2</a></li>
-          <li id="result-3" ><a onclick="">Result-3</a><a onclick="deleteGame(3);">result-3</a></li>
-          <li id="result-4" ><a onclick="">Result-4</a><a onclick="deleteGame(4);">result-4</a></li>
-          <li id="result-5" ><a onclick="">Result-5</a><a onclick="deleteGame(5);">result-5</a></li>
-          <li id="result-6" ><a onclick="">Result-6</a><a onclick="deleteGame(6);">result-6</a></li>
+          <li id="result-1"><a onclick="" id="res1">Result-1</a><a onclick="deleteGame(1);">result-1</a></li>
+          <li id="result-2"><a onclick="" id="res2">Result-2</a><a onclick="deleteGame(2);">result-2</a></li>
+          <li id="result-3"><a onclick="" id="res3">Result-3</a><a onclick="deleteGame(3);">result-3</a></li>
+          <li id="result-4"><a onclick="" id="res4">Result-4</a><a onclick="deleteGame(4);">result-4</a></li>
+          <li id="result-5"><a onclick="" id="res5">Result-5</a><a onclick="deleteGame(5);">result-5</a></li>
+          <li id="result-6"><a onclick="" id="res6">Result-6</a><a onclick="deleteGame(6);">result-6</a></li>
+          <li id="result-7"></li>
+          <li id="result-8"></li>
         </ul>
         
       </div><!-- /content -->
