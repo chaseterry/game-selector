@@ -78,6 +78,10 @@
         alert("deleted: "+games[number].name);
         games = newGames;
       }
+      
+      function editGame(number){
+        alert("Edit: "+number);
+      }
 
       
       //All testing
@@ -209,7 +213,7 @@
           </li>
           <li id="result-2" data-icon="delete"><a onclick="deleteGame(2)"></a></li>
           <li id="result-3" data-icon="delete"><a onclick="deleteGame(3);">result-3</a></li>
-          <li id="result-4" ><a onclick="edit();">Edit result-4</a><a onclick="deleteGame(4);">result-4</a></li>
+          <li id="result-4" ><a onclick="editGame(4);">Edit result-4</a><a onclick="deleteGame(4);">result-4</a></li>
           <li id="result-5" ><a onclick="deleteGame(5);">result-5</a></li>
           <li id="result-6">result-6 <span class="ui-li-count">result-6-count</span></li>
         </ul>
