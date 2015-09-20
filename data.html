@@ -95,17 +95,17 @@
       
       function showList(){
         if(hasLocalStorage()){
+          alert("try change");
           var newDatabase = JSON.parse(localStorage.database);
-          //document.getElementById("result-1").innerHTML = newDatabase[0].name;
+          document.getElementById("result-1").innerHTML = newDatabase[0].name;
           var x = 0;
-          document.getElementById("result-1").innerHTML = "<li <pid='result-1'>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>Delete item</a></li>"
+          //document.getElementById("result-1").innerHTML = "<li <pid='result-1'>" + newDatabase[x].name + "</p><a onclick='deleteGame("+x+");'>Delete item</a></li>"
           document.getElementById("result-2").innerHTML = newDatabase[1].name;
           document.getElementById("result-3").innerHTML = newDatabase[2].name;
           //document.getElementById("result-4").innerHTML = computeResult(4);
           //document.getElementById("result-5").innerHTML = computeResult(5);
           //document.getElementById("result-6").innerHTML = computeResult(6);
         }
-        alert("show list end");
       }
       
       
