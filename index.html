@@ -15,6 +15,27 @@
     <!-- End JQuery Mobile Setup -->
 
     <script>
+        var counter = 0;
+      //javascript
+      function rolldie(num){
+        var roll = random(1, num);
+        var display = document.getElementById("number-spot");
+        var i = 0;
+        for(i = 0; i < 20; i++){
+          display.innerHTML = random(1, num);
+          //sleep functions are really annoying in javascript
+        }
+        display.innerHTML = roll;
+      }
+      function changeScore(num){
+        var display = document.getElementById("point-spot");
+        counter = counter + num;
+        display.innerHTML = counter;
+      }
+      function suggestion(){
+        var display = document.getElementById("suggestion-spot");
+        display.innerHTML = "NOSE GOES!! Touch a random person's nose, whoever's nose get's touched last goes first."
+      }
       //javascript
       //var gug;
       //gug = 5;
