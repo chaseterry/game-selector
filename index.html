@@ -109,7 +109,7 @@
           playerInfo = playerInfo + games[x].minPlayers + "-" + games[x].maxPlayers;
           text = text + games[x].name;
           displayTitle.innerHTML = text;
-          displayDuration.innerHTML = duration + " " + playerInfo;
+          displayDuration.innerHTML = duration + " minutes, " + playerInfo;
         }
         function selectGame(){
           var title = document.getElementById("game-spot").innerHTML;
