@@ -13,9 +13,9 @@ Contains the editable list
 ######Extras:
 Has appletts and help info
 #####ToDo list:
-- Make barebones tabbed system
-- Randomize from static list
-- Editable list
-- Appletts in extras page
 - Associate appletts with games
-- Local storage
+- Fix reading duration/players wrongly
+- Animate dice rolls
+- Preset values for point counter
+- Dynamic list view
+- Disable zoom/highlighting
