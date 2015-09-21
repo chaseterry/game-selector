@@ -34,7 +34,7 @@
       function addToDatabase(object){
         if(hasLocalStorage()){
           if(localStorage.database){
-            alert("next");
+            //alert("next");
             //games.sort(function(a, b){return a.name.localeCompare(b.name)});
             var oldDatabase = JSON.parse(localStorage.database);
             games = oldDatabase;
@@ -42,7 +42,7 @@
             localStorage.database = JSON.stringify(games);
           } 
           else{
-            alert("first");
+            //alert("first");
             localStorage.database = JSON.stringify(games);
           }
           var temp = JSON.parse(localStorage.database);
@@ -239,16 +239,16 @@
       
       <div data-role="main" class="ui-content">
         <a href="#datapage" data-role="button" data-mini="true" align="right" data-inline="true" data-transition="none">Go back</a>
-        <a href="#datapage" data-role="button" data-mini="true" align="right" onclick="deleteAllGames();" data-inline="true">Delete all games</a>
+        <a href="#datapage" data-role="button" data-mini="true" align="right" onclick="deleteAllGames();" data-inline="true" data-transition="none">Delete all games</a>
 
         <h1 align="center" >List:</h1>
         <ul data-role="listview" data-split-icon="delete" data-filter="true" data-inset="true" align="center">
-          <li id="result-1"><a onclick="" id="res1"></a><a href="#datapage" onclick="deleteGame(1);">result-1</a></li>
-          <li id="result-2"><a onclick="" id="res2"></a><a href="#datapage" onclick="deleteGame(2);">result-2</a></li>
-          <li id="result-3"><a onclick="" id="res3"></a><a href="#datapage" onclick="deleteGame(3);">result-3</a></li>
-          <li id="result-4"><a onclick="" id="res4"></a><a href="#datapage" onclick="deleteGame(4);">result-4</a></li>
-          <li id="result-5"><a onclick="" id="res5"></a><a href="#datapage" onclick="deleteGame(5);">result-5</a></li>
-          <li id="result-6"><a onclick="" id="res6"></a><a href="#datapage" onclick="deleteGame(6);">result-6</a></li>
+          <li id="result-1"><a onclick="" id="res1"></a><a href="#datapage" onclick="deleteGame(1);" data-transition="none">result-1</a></li>
+          <li id="result-2"><a onclick="" id="res2"></a><a href="#datapage" onclick="deleteGame(2);" data-transition="none">result-2</a></li>
+          <li id="result-3"><a onclick="" id="res3"></a><a href="#datapage" onclick="deleteGame(3);" data-transition="none">result-3</a></li>
+          <li id="result-4"><a onclick="" id="res4"></a><a href="#datapage" onclick="deleteGame(4);" data-transition="none">result-4</a></li>
+          <li id="result-5"><a onclick="" id="res5"></a><a href="#datapage" onclick="deleteGame(5);" data-transition="none">result-5</a></li>
+          <li id="result-6"><a onclick="" id="res6"></a><a href="#datapage" onclick="deleteGame(6);" data-transition="none">result-6</a></li>
           <!--
           <li id="result-7"></li>
           <li id="result-8"></li>
