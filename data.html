@@ -34,7 +34,7 @@
       function addToDatabase(object){
         if(hasLocalStorage()){
           if(localStorage.database){
-            //alert("next");
+            alert("Submited: "+object.name);
             //games.sort(function(a, b){return a.name.localeCompare(b.name)});
             var oldDatabase = JSON.parse(localStorage.database);
             games = oldDatabase;
