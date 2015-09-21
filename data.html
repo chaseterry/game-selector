@@ -70,6 +70,7 @@
         //alert("test: "+number);
         //return;
         var newGames = [];
+        number--;
         for(i = 0; i < number; i++)
         {
           newGames.push(games[i]);
@@ -80,6 +81,7 @@
         }
         alert("deleted: "+games[number].name);
         games = newGames;
+        showList();
       }
       
       function editGame(number){
@@ -101,6 +103,7 @@
         else{
           alert("No HTML5 Local Storage");
         }
+        showList();
       }
 
       
