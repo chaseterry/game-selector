@@ -80,10 +80,9 @@
           newGames.push(games[j]); 
         }
         alert("deleted: "+games[number].name);
-        alert("new: "+newGames[number].name);
         games = newGames;
+        localStorage.database = JSON.stringify(games);
         showList();
-        alert("test should be new: "+games[number].name);
       }
       
       function editGame(number){
@@ -149,9 +148,7 @@
           document.getElementById("res5").innerHTML = "";
           document.getElementById("res6").innerHTML = "";
           var newDatabase = JSON.parse(localStorage.database);
-          alert(document.getElementById("res1").innerHTML.value);
           document.getElementById("res1").innerHTML = newDatabase[0].name;
-          alert(document.getElementById("res1").innerHTML.value);
           document.getElementById("res2").innerHTML = newDatabase[1].name;
           document.getElementById("res3").innerHTML = newDatabase[2].name;
           document.getElementById("res4").innerHTML = newDatabase[3].name;
