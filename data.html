@@ -80,8 +80,10 @@
           newGames.push(games[j]); 
         }
         alert("deleted: "+games[number].name);
+        alert("new: "+newGames[number].name);
         games = newGames;
         showList();
+        alert("test should be new: "+games[number].name);
       }
       
       function editGame(number){
