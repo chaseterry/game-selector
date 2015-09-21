@@ -85,6 +85,23 @@
       function editGame(number){
         alert("Edit: "+number);
       }
+      
+      function deleteAllGames(){
+        games = [];
+        if(hasLocalStorage()){
+          if(localStorage.database){
+            games = []];
+            localStorage.database = JSON.stringify(games);
+          } 
+          else{
+            games = [];
+            localStorage.database = JSON.stringify(games);
+          }
+        }
+        else{
+          alert("No HTML5 Local Storage");
+        }
+      }
 
       
       //All testing
@@ -224,6 +241,8 @@
       <div data-role="main" class="ui-content">
         <a href="#datapage" data-role="button" data-mini="true" align="right" data-inline="true" data-transition="none">Go back</a>
         <a data-role="button" data-mini="true" align="right" onclick="showList();" data-inline="true">Edit/view list</a>
+        <a data-role="button" data-mini="true" align="right" onclick="deleteAllGames();" data-inline="true">Delete all games</a>
+
         <h1 align="center" >List:</h1>
         <ul data-role="listview" data-split-icon="delete" data-filter="true" data-inset="true" align="center">
           <li id="result-1"><a onclick="" id="res1">Result-1</a><a onclick="deleteGame(1);">result-1</a></li>
