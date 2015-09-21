@@ -61,7 +61,7 @@
         var min = document.getElementById("min-players").value;
         var max = document.getElementById("max-players").value;
         var appArray = [$('#dice').is(':checked'), $('#starting-player').is(':checked')];
-        var game1 = new game(name, isBoard, isCard, catArray, min, max, appArray);
+        var game1 = new game(name, isBoard, isCard, catArray, duration, min, max, appArray);
         addToDatabase(game1);
       }
       
