@@ -33,19 +33,19 @@
       
       function addToDatabase(object){
         if(hasLocalStorage()){
-          if(localStorage.database){
+          if(localStorage.gameDatabase){
             alert("Submited: "+object.name);
             //games.sort(function(a, b){return a.name.localeCompare(b.name)});
-            var oldDatabase = JSON.parse(localStorage.database);
+            var oldDatabase = JSON.parse(localStorage.gameDatabase);
             games = oldDatabase;
             games.push(object);
-            localStorage.database = JSON.stringify(games);
+            localStorage.gameDatabase = JSON.stringify(games);
           } 
           else{
             //alert("first");
-            localStorage.database = JSON.stringify(games);
+            localStorage.gameDatabase = JSON.stringify(games);
           }
-          var temp = JSON.parse(localStorage.database);
+          var temp = JSON.parse(localStorage.gameDatabase);
         }
         else{
           alert("No HTML5 Local Storage");
@@ -81,7 +81,7 @@
         }
         alert("deleted: "+games[number].name);
         games = newGames;
-        localStorage.database = JSON.stringify(games);
+        localStorage.gameDatabase = JSON.stringify(games);
         showList();
       }
       
@@ -92,13 +92,13 @@
       function deleteAllGames(){
         games = [];
         if(hasLocalStorage()){
-          if(localStorage.database){
+          if(localStorage.gameDatabase){
             games = [];
-            localStorage.database = JSON.stringify(games);
+            localStorage.gameDatabase = JSON.stringify(games);
           } 
           else{
             games = [];
-            localStorage.database = JSON.stringify(games);
+            localStorage.gameDatabase = JSON.stringify(games);
           }
         }
         else{
@@ -151,7 +151,7 @@
           document.getElementById("res8").innerHTML = "";
           document.getElementById("res9").innerHTML = "";
           document.getElementById("res10").innerHTML = "";
-          var newDatabase = JSON.parse(localStorage.database);
+          var newDatabase = JSON.parse(localStorage.gameDatabase);
           document.getElementById("res1").innerHTML = newDatabase[0].name;
           document.getElementById("res2").innerHTML = newDatabase[1].name;
           document.getElementById("res3").innerHTML = newDatabase[2].name;
